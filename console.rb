@@ -57,14 +57,18 @@ nevermind = Album.new (
 )
 nevermind.save()
 
-artists = Artist.all()
-albums = Album.all()
-
 black_star.genre = "avant Guard"
 black_star.update()
 
 nirvana.genre = 'Rock'
 nirvana.update()
+
+in_utero.delete()
+nevermind.delete()
+nirvana.delete()
+
+artists = Artist.all()
+albums = Album.all()
 
 binding.pry
 nil
