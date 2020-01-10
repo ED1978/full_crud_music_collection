@@ -68,6 +68,7 @@ nirvana.update()
 # nirvana.delete()
 
 found_artist = Artist.find(nirvana.id)
+found_album = Album.find(nevermind.id)
 
 artists = Artist.all()
 albums = Album.all()
