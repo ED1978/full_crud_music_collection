@@ -3,7 +3,8 @@ require_relative('../db/sql_runner.rb')
 
 class Artist
 
-  attr_reader :name, :genre, :id
+  attr_reader :id
+  attr_accessor :name, :genre
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -44,6 +45,20 @@ class Artist
     values = [@id]
     albums = SqlRunner.run(sql, values)
     return albums.map {|album| Album.new(album)}
+  end
+
+  def update()
+    sql = "UPDATE artists SET
+    (
+      name,
+      genre
+    ) =
+    (
+      $1, $2
+    )
+    WHERE id = $3"
+    values = [@name, @genre, @id]
+    SqlRunner.run(sql,values)
   end
 
 end

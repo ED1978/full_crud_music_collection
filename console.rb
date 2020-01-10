@@ -60,7 +60,11 @@ nevermind.save()
 artists = Artist.all()
 albums = Album.all()
 
-nirvana_albums = nirvana.albums()
+black_star.genre = "avant Guard"
+black_star.update()
+
+nirvana.genre = 'Rock'
+nirvana.update()
 
 binding.pry
 nil
