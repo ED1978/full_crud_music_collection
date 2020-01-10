@@ -57,6 +57,7 @@ nevermind = Album.new (
 )
 nevermind.save()
 
+artists = Artist.all()
 albums = Album.all()
 
 binding.pry
