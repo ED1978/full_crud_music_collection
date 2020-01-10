@@ -60,5 +60,7 @@ nevermind.save()
 artists = Artist.all()
 albums = Album.all()
 
+nirvana_albums = nirvana.albums()
+
 binding.pry
 nil
