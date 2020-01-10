@@ -63,9 +63,11 @@ black_star.update()
 nirvana.genre = 'Rock'
 nirvana.update()
 
-in_utero.delete()
-nevermind.delete()
-nirvana.delete()
+# in_utero.delete()
+# nevermind.delete()
+# nirvana.delete()
+
+found_artist = Artist.find(nirvana.id)
 
 artists = Artist.all()
 albums = Album.all()
